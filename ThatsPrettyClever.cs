@@ -21,7 +21,7 @@ namespace TPCDice
         private Game CurrGame = Game.ThatsPrettClever;
         private enum Game
         {
-            ThatsPrettClever = 0,
+            ThatsPrettClever,
             TwiceAsClever
         }
 
