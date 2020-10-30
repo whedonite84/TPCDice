@@ -18,10 +18,10 @@ namespace TPCDice
         private int _rollNum;
         private DiceCollection _diceCap;
 
-        private Game CurrGame = Game.ThatsPrettClever;
+        private Game CurrGame = Game.ThatsPrettyClever;
         private enum Game
         {
-            ThatsPrettClever,
+            ThatsPrettyClever,
             TwiceAsClever
         }
 
@@ -51,8 +51,8 @@ namespace TPCDice
             txtYellow.BackColor = Color.Yellow;
             txtBlue.BackColor = Color.CornflowerBlue;
             txtGreen.BackColor = Color.Green;
-            txtOrange.BackColor = CurrGame == Game.ThatsPrettClever ? Color.Orange : Color.Gray;
-            txtPurple.BackColor = CurrGame == Game.ThatsPrettClever ? Color.DarkOrchid : Color.HotPink;
+            txtOrange.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.Orange : Color.Gray;
+            txtPurple.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.DarkOrchid : Color.HotPink;
             txtWhite.BackColor = Color.White;
 
             BtnRecall.Visible = CurrGame == Game.TwiceAsClever;
@@ -107,7 +107,7 @@ namespace TPCDice
 
         private void RbTPC_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeGame(Game.ThatsPrettClever);
+            ChangeGame(Game.ThatsPrettyClever);
         }
 
         private void RbTwice_CheckedChanged(object sender, EventArgs e)
