@@ -37,10 +37,13 @@
             this.txtWhite = new System.Windows.Forms.TextBox();
             this.btnRoll = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PicPlatter = new System.Windows.Forms.PictureBox();
             this.lblRollNum = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.RbTPC = new System.Windows.Forms.RadioButton();
+            this.RbTwice = new System.Windows.Forms.RadioButton();
+            this.BtnRecall = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.PicPlatter)).BeginInit();
             this.SuspendLayout();
             // 
             // txtYellow
@@ -48,7 +51,7 @@
             this.txtYellow.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtYellow.BackColor = System.Drawing.Color.Yellow;
             this.txtYellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYellow.Location = new System.Drawing.Point(102, 22);
+            this.txtYellow.Location = new System.Drawing.Point(152, 22);
             this.txtYellow.Name = "txtYellow";
             this.txtYellow.ReadOnly = true;
             this.txtYellow.Size = new System.Drawing.Size(83, 83);
@@ -62,7 +65,7 @@
             this.txtBlue.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBlue.BackColor = System.Drawing.Color.Blue;
             this.txtBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBlue.Location = new System.Drawing.Point(191, 22);
+            this.txtBlue.Location = new System.Drawing.Point(241, 22);
             this.txtBlue.Name = "txtBlue";
             this.txtBlue.ReadOnly = true;
             this.txtBlue.Size = new System.Drawing.Size(83, 83);
@@ -76,7 +79,7 @@
             this.txtGreen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGreen.Location = new System.Drawing.Point(280, 22);
+            this.txtGreen.Location = new System.Drawing.Point(330, 22);
             this.txtGreen.Name = "txtGreen";
             this.txtGreen.ReadOnly = true;
             this.txtGreen.Size = new System.Drawing.Size(83, 83);
@@ -90,7 +93,7 @@
             this.txtOrange.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtOrange.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrange.Location = new System.Drawing.Point(102, 111);
+            this.txtOrange.Location = new System.Drawing.Point(152, 111);
             this.txtOrange.Name = "txtOrange";
             this.txtOrange.ReadOnly = true;
             this.txtOrange.Size = new System.Drawing.Size(83, 83);
@@ -104,7 +107,7 @@
             this.txtPurple.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPurple.BackColor = System.Drawing.Color.Purple;
             this.txtPurple.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPurple.Location = new System.Drawing.Point(191, 111);
+            this.txtPurple.Location = new System.Drawing.Point(241, 111);
             this.txtPurple.Name = "txtPurple";
             this.txtPurple.ReadOnly = true;
             this.txtPurple.Size = new System.Drawing.Size(83, 83);
@@ -119,7 +122,7 @@
             this.txtWhite.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtWhite.BackColor = System.Drawing.Color.White;
             this.txtWhite.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWhite.Location = new System.Drawing.Point(280, 111);
+            this.txtWhite.Location = new System.Drawing.Point(330, 111);
             this.txtWhite.Name = "txtWhite";
             this.txtWhite.ReadOnly = true;
             this.txtWhite.Size = new System.Drawing.Size(83, 83);
@@ -131,7 +134,7 @@
             // btnRoll
             // 
             this.btnRoll.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRoll.Location = new System.Drawing.Point(376, 200);
+            this.btnRoll.Location = new System.Drawing.Point(476, 200);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(75, 23);
             this.btnRoll.TabIndex = 8;
@@ -142,7 +145,7 @@
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnReset.Location = new System.Drawing.Point(295, 200);
+            this.btnReset.Location = new System.Drawing.Point(395, 200);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 7;
@@ -150,23 +153,24 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // pictureBox1
+            // PicPlatter
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PicPlatter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::TPCDice.Properties.Resources.Platter;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 229);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(442, 247);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PicPlatter.Image = global::TPCDice.Properties.Resources.Platter;
+            this.PicPlatter.Location = new System.Drawing.Point(12, 229);
+            this.PicPlatter.Name = "PicPlatter";
+            this.PicPlatter.Size = new System.Drawing.Size(542, 247);
+            this.PicPlatter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicPlatter.TabIndex = 0;
+            this.PicPlatter.TabStop = false;
             // 
             // lblRollNum
             // 
+            this.lblRollNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblRollNum.AutoSize = true;
-            this.lblRollNum.Location = new System.Drawing.Point(99, 6);
+            this.lblRollNum.Location = new System.Drawing.Point(149, 6);
             this.lblRollNum.Name = "lblRollNum";
             this.lblRollNum.Size = new System.Drawing.Size(63, 13);
             this.lblRollNum.TabIndex = 9;
@@ -174,7 +178,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(369, 55);
+            this.button1.Location = new System.Drawing.Point(12, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
@@ -183,13 +187,53 @@
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // RbTPC
+            // 
+            this.RbTPC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RbTPC.AutoSize = true;
+            this.RbTPC.Checked = true;
+            this.RbTPC.Location = new System.Drawing.Point(417, 22);
+            this.RbTPC.Name = "RbTPC";
+            this.RbTPC.Size = new System.Drawing.Size(120, 17);
+            this.RbTPC.TabIndex = 11;
+            this.RbTPC.TabStop = true;
+            this.RbTPC.Text = "That\'s Pretty Clever!";
+            this.RbTPC.UseVisualStyleBackColor = true;
+            this.RbTPC.CheckedChanged += new System.EventHandler(this.RbTPC_CheckedChanged);
+            // 
+            // RbTwice
+            // 
+            this.RbTwice.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RbTwice.AutoSize = true;
+            this.RbTwice.Location = new System.Drawing.Point(417, 46);
+            this.RbTwice.Name = "RbTwice";
+            this.RbTwice.Size = new System.Drawing.Size(105, 17);
+            this.RbTwice.TabIndex = 12;
+            this.RbTwice.Text = "Twice As Clever!";
+            this.RbTwice.UseVisualStyleBackColor = true;
+            this.RbTwice.CheckedChanged += new System.EventHandler(this.RbTwice_CheckedChanged);
+            // 
+            // BtnRecall
+            // 
+            this.BtnRecall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnRecall.Location = new System.Drawing.Point(467, 436);
+            this.BtnRecall.Name = "BtnRecall";
+            this.BtnRecall.Size = new System.Drawing.Size(75, 23);
+            this.BtnRecall.TabIndex = 13;
+            this.BtnRecall.Text = "Recall";
+            this.BtnRecall.UseVisualStyleBackColor = true;
+            this.BtnRecall.Click += new System.EventHandler(this.BtnRecall_Click);
+            // 
             // ThatsPrettyClever
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(463, 469);
+            this.ClientSize = new System.Drawing.Size(563, 469);
+            this.Controls.Add(this.BtnRecall);
+            this.Controls.Add(this.RbTwice);
+            this.Controls.Add(this.RbTPC);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblRollNum);
             this.Controls.Add(this.btnReset);
@@ -200,12 +244,12 @@
             this.Controls.Add(this.txtGreen);
             this.Controls.Add(this.txtBlue);
             this.Controls.Add(this.txtYellow);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PicPlatter);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ThatsPrettyClever";
             this.Text = "That\'s Pretty Clever!";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicPlatter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,9 +265,12 @@
         public System.Windows.Forms.TextBox txtWhite;
         private System.Windows.Forms.Button btnRoll;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PicPlatter;
         private System.Windows.Forms.Label lblRollNum;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton RbTPC;
+        private System.Windows.Forms.RadioButton RbTwice;
+        private System.Windows.Forms.Button BtnRecall;
     }
 }
 

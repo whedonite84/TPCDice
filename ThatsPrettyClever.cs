@@ -18,6 +18,13 @@ namespace TPCDice
         private int _rollNum;
         private DiceCollection _diceCap;
 
+        private Game CurrGame = Game.ThatsPrettClever;
+        private enum Game
+        {
+            ThatsPrettClever = 0,
+            TwiceAsClever
+        }
+
         private int RollNum
         {
             get => _rollNum;
@@ -32,16 +39,23 @@ namespace TPCDice
         {
             InitializeComponent();
 
-            txtYellow.BackColor = Color.Yellow;
-            txtBlue.BackColor = Color.CornflowerBlue;
-            txtGreen.BackColor = Color.Green;
-            txtOrange.BackColor = Color.Orange;
-            txtPurple.BackColor = Color.DarkOrchid;
-            txtWhite.BackColor = Color.White;
+            Redraw();
 
             _dice = DiceCollection.Load(this, _rng);
 
             RollNum = 1;
+        }
+
+        private void Redraw()
+        {
+            txtYellow.BackColor = Color.Yellow;
+            txtBlue.BackColor = Color.CornflowerBlue;
+            txtGreen.BackColor = Color.Green;
+            txtOrange.BackColor = CurrGame == Game.ThatsPrettClever ? Color.Orange : Color.Gray;
+            txtPurple.BackColor = CurrGame == Game.ThatsPrettClever ? Color.DarkOrchid : Color.HotPink;
+            txtWhite.BackColor = Color.White;
+
+            BtnRecall.Visible = CurrGame == Game.TwiceAsClever;
         }
 
         private void btnRoll_Click(object sender, EventArgs e)
@@ -74,6 +88,9 @@ namespace TPCDice
             btnRoll.Text = "Roll";
         }
 
+        /// <summary>
+        /// idkwtf
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             if (button1.Text == "Capture")
@@ -86,6 +103,27 @@ namespace TPCDice
                 _dice = _diceCap;
                 button1.Text = "Capture";
             }
+        }
+
+        private void RbTPC_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeGame(Game.ThatsPrettClever);
+        }
+
+        private void RbTwice_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeGame(Game.TwiceAsClever);
+        }
+
+        private void ChangeGame(Game game)
+        {
+            CurrGame = game;
+            Redraw();
+        }
+
+        private void BtnRecall_Click(object sender, EventArgs e)
+        {
+            foreach (var d in _dice.Where(d => d.Held && d.OnPlatter)) d.Reset();
         }
     }
 
