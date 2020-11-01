@@ -27,7 +27,8 @@ namespace TPCDice
         private enum Game
         {
             ThatsPrettyClever,
-            TwiceAsClever
+            TwiceAsClever,
+            CleverCubed
         }
 
         private int RollNum
@@ -60,10 +61,32 @@ namespace TPCDice
         {
             txtYellow.BackColor = Color.Yellow;
             txtBlue.BackColor = Color.CornflowerBlue;
-            txtGreen.BackColor = Color.Green;
-            txtOrange.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.Orange : Color.Gray;
-            txtPurple.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.DarkOrchid : Color.HotPink;
+            //txtGreen.BackColor = Color.Green;
+            //txtOrange.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.Orange : Color.Gray;
+            //txtPurple.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.DarkOrchid : Color.HotPink;
             txtWhite.BackColor = Color.White;
+
+            switch (CurrGame)
+            {
+                case Game.ThatsPrettyClever:
+                    Text = "Ganz Schön Clever!";
+                    txtGreen.BackColor = Color.Green;
+                    txtOrange.BackColor = Color.Orange;
+                    txtPurple.BackColor = Color.DarkOrchid;
+                    break;
+                case Game.TwiceAsClever:
+                    Text = "Doppelt So Clever!";
+                    txtGreen.BackColor = Color.Green;
+                    txtOrange.BackColor = Color.Gray;
+                    txtPurple.BackColor = Color.HotPink;
+                    break;
+                case Game.CleverCubed:
+                    Text = "Clever Hoch Drei!";
+                    txtGreen.BackColor = Color.Turquoise;
+                    txtOrange.BackColor = Color.Chocolate;
+                    txtPurple.BackColor = Color.HotPink;
+                    break;
+            }
 
             BtnDieBack.Visible = CurrGame == Game.TwiceAsClever;
         }
@@ -128,6 +151,11 @@ namespace TPCDice
         private void RbTwice_CheckedChanged(object sender, EventArgs e)
         {
             ChangeGame(Game.TwiceAsClever);
+        }
+
+        private void RbCleverCubed_CheckedChanged(object sender, EventArgs e)
+        {
+            ChangeGame(Game.CleverCubed);
         }
 
         private void ChangeGame(Game game)

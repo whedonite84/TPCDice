@@ -47,6 +47,7 @@
             this.ColPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PicPlayerLock = new System.Windows.Forms.PictureBox();
             this.PicPlatter = new System.Windows.Forms.PictureBox();
+            this.RbCleverCubed = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.GrdPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlayerLock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlatter)).BeginInit();
@@ -270,6 +271,18 @@
             this.PicPlatter.TabIndex = 0;
             this.PicPlatter.TabStop = false;
             // 
+            // RbCleverCubed
+            // 
+            this.RbCleverCubed.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RbCleverCubed.AutoSize = true;
+            this.RbCleverCubed.Location = new System.Drawing.Point(448, 69);
+            this.RbCleverCubed.Name = "RbCleverCubed";
+            this.RbCleverCubed.Size = new System.Drawing.Size(92, 17);
+            this.RbCleverCubed.TabIndex = 17;
+            this.RbCleverCubed.Text = "Clever Cubed!";
+            this.RbCleverCubed.UseVisualStyleBackColor = true;
+            this.RbCleverCubed.CheckedChanged += new System.EventHandler(this.RbCleverCubed_CheckedChanged);
+            // 
             // ThatsPrettyClever
             // 
             this.AllowDrop = true;
@@ -277,6 +290,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(624, 477);
+            this.Controls.Add(this.RbCleverCubed);
             this.Controls.Add(this.PicPlayerLock);
             this.Controls.Add(this.GrdPlayers);
             this.Controls.Add(this.BtnScore);
@@ -297,7 +311,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ThatsPrettyClever";
-            this.Text = "That\'s Pretty Clever!";
+            this.Text = "Ganz Schön Clever!";
             ((System.ComponentModel.ISupportInitialize)(this.GrdPlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlayerLock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlatter)).EndInit();
@@ -326,6 +340,7 @@
         public System.Windows.Forms.DataGridView GrdPlayers;
         public System.Windows.Forms.PictureBox PicPlayerLock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPlayer;
+        private System.Windows.Forms.RadioButton RbCleverCubed;
     }
 }
 
