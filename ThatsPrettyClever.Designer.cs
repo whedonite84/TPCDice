@@ -239,7 +239,6 @@
             this.GrdPlayers.Name = "GrdPlayers";
             this.GrdPlayers.Size = new System.Drawing.Size(145, 209);
             this.GrdPlayers.TabIndex = 15;
-            this.GrdPlayers.SelectionChanged += new System.EventHandler(this.GrdPlayers_SelectionChanged);
             // 
             // ColPlayer
             // 

@@ -145,11 +145,6 @@ namespace TPCDice
         {
             _players.Locked = !_players.Locked;
         }
-
-        private void GrdPlayers_SelectionChanged(object sender, EventArgs e)
-        {
-            //_players.Current
-        }
     }
 
     public class Die
@@ -288,6 +283,8 @@ namespace TPCDice
 
         public void Next()
         {
+            if (_selectedRow == null) return;
+
             int selectedIndex = _grd.Rows.IndexOf(_selectedRow);
             _selectedRow.Selected = false;
             selectedIndex++;
