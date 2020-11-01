@@ -89,7 +89,10 @@
     <None Include="Resources\regencyround-tray-10077222_933610_ED.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\padlock.png" />
     <Content Include="Resources\Shake And Roll Dice-SoundBible.com-591494296.wav" />
+    <None Include="Resources\unlock.png" />
+    <None Include="Resources\unlock-padlock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

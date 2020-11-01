@@ -63,6 +63,16 @@ namespace TPCDice.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lock {
+            get {
+                object obj = ResourceManager.GetObject("Lock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Platter {
             get {
                 object obj = ResourceManager.GetObject("Platter", resourceCulture);
@@ -76,6 +86,16 @@ namespace TPCDice.Properties {
         internal static System.IO.UnmanagedMemoryStream RollSound {
             get {
                 return ResourceManager.GetStream("RollSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unlock {
+            get {
+                object obj = ResourceManager.GetObject("Unlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
