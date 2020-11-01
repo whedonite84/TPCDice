@@ -42,7 +42,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.RbTPC = new System.Windows.Forms.RadioButton();
             this.RbTwice = new System.Windows.Forms.RadioButton();
-            this.BtnRecall = new System.Windows.Forms.Button();
+            this.BtnDieBack = new System.Windows.Forms.Button();
+            this.BtnScore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlatter)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,16 +214,27 @@
             this.RbTwice.UseVisualStyleBackColor = true;
             this.RbTwice.CheckedChanged += new System.EventHandler(this.RbTwice_CheckedChanged);
             // 
-            // BtnRecall
+            // BtnDieBack
             // 
-            this.BtnRecall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnRecall.Location = new System.Drawing.Point(467, 436);
-            this.BtnRecall.Name = "BtnRecall";
-            this.BtnRecall.Size = new System.Drawing.Size(75, 23);
-            this.BtnRecall.TabIndex = 13;
-            this.BtnRecall.Text = "Recall";
-            this.BtnRecall.UseVisualStyleBackColor = true;
-            this.BtnRecall.Click += new System.EventHandler(this.BtnRecall_Click);
+            this.BtnDieBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDieBack.Location = new System.Drawing.Point(467, 436);
+            this.BtnDieBack.Name = "BtnDieBack";
+            this.BtnDieBack.Size = new System.Drawing.Size(75, 23);
+            this.BtnDieBack.TabIndex = 13;
+            this.BtnDieBack.Text = "Die Back";
+            this.BtnDieBack.UseVisualStyleBackColor = true;
+            this.BtnDieBack.Click += new System.EventHandler(this.BtnDieBack_Click);
+            // 
+            // BtnScore
+            // 
+            this.BtnScore.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BtnScore.Location = new System.Drawing.Point(476, 171);
+            this.BtnScore.Name = "BtnScore";
+            this.BtnScore.Size = new System.Drawing.Size(75, 23);
+            this.BtnScore.TabIndex = 14;
+            this.BtnScore.Text = "Score";
+            this.BtnScore.UseVisualStyleBackColor = true;
+            this.BtnScore.Click += new System.EventHandler(this.BtnScore_Click);
             // 
             // ThatsPrettyClever
             // 
@@ -231,7 +243,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(563, 469);
-            this.Controls.Add(this.BtnRecall);
+            this.Controls.Add(this.BtnScore);
+            this.Controls.Add(this.BtnDieBack);
             this.Controls.Add(this.RbTwice);
             this.Controls.Add(this.RbTPC);
             this.Controls.Add(this.button1);
@@ -270,7 +283,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton RbTPC;
         private System.Windows.Forms.RadioButton RbTwice;
-        private System.Windows.Forms.Button BtnRecall;
+        private System.Windows.Forms.Button BtnDieBack;
+        private System.Windows.Forms.Button BtnScore;
     }
 }
 
