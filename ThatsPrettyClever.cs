@@ -61,9 +61,6 @@ namespace TPCDice
         {
             txtYellow.BackColor = Color.Yellow;
             txtBlue.BackColor = Color.CornflowerBlue;
-            //txtGreen.BackColor = Color.Green;
-            //txtOrange.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.Orange : Color.Gray;
-            //txtPurple.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.DarkOrchid : Color.HotPink;
             txtWhite.BackColor = Color.White;
 
             switch (CurrGame)
