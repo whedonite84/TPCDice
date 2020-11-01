@@ -55,29 +55,27 @@ namespace TPCDice
             txtPurple.BackColor = CurrGame == Game.ThatsPrettyClever ? Color.DarkOrchid : Color.HotPink;
             txtWhite.BackColor = Color.White;
 
-            BtnRecall.Visible = CurrGame == Game.TwiceAsClever;
+            BtnDieBack.Visible = CurrGame == Game.TwiceAsClever;
+        }
+
+        private void BtnScore_Click(object sender, EventArgs e)
+        {
+            if (_mostRecentlyHeld != null && _dice.HoldCount >= RollNum) _dice.Place(_mostRecentlyHeld);
+            Refresh();
         }
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            if (_mostRecentlyHeld != null && _dice.HoldCount >= RollNum) _dice.Place(_mostRecentlyHeld);
-
             RollNum = _dice.HoldCount + 1;
-
-            Refresh();
-            if (btnRoll.Text == "Roll") _dice.Roll();
+            _dice.Roll();
         }
 
         private void txtDie_Click(object sender, EventArgs e)
         {
             var die = _dice[(TextBox)sender];
 
-            if (!die.Held && RollNum <= _dice.HoldCount) return;
-
             die.Held = !die.Held;
             if (die.Held) _mostRecentlyHeld = die;
-
-            btnRoll.Text = _dice.HoldCount == 3 ? "Score" : "Roll";
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -121,7 +119,7 @@ namespace TPCDice
             Redraw();
         }
 
-        private void BtnRecall_Click(object sender, EventArgs e)
+        private void BtnDieBack_Click(object sender, EventArgs e)
         {
             foreach (var d in _dice.Where(d => d.Held && d.OnPlatter)) d.Reset();
         }
