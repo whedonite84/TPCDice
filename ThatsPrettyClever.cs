@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -14,9 +16,12 @@ namespace TPCDice
         private DiceCollection _dice;
         private readonly Random _rng = new Random();
         private Die _mostRecentlyHeld;
+        private bool _firstRollSinceReset;
 
         private int _rollNum;
         private DiceCollection _diceCap;
+
+        private Players _players;
 
         private Game CurrGame = Game.ThatsPrettyClever;
         private enum Game
@@ -31,7 +36,11 @@ namespace TPCDice
             set
             {
                 _rollNum = Math.Min(value, 3);
-                lblRollNum.Text = $"Roll #{RollNum} of 3";
+                string playersRoll = _players.Current == null ? "Roll" :
+                    _players.Current.EndsWith("s") ? $"{_players.Current}' roll" :
+                    $"{_players.Current}'s roll";
+
+                lblRollNum.Text = $"{playersRoll} #{RollNum} of 3";
             }
         }
 
@@ -42,6 +51,7 @@ namespace TPCDice
             Redraw();
 
             _dice = DiceCollection.Load(this, _rng);
+            _players = new Players(this);
 
             RollNum = 1;
         }
@@ -66,7 +76,14 @@ namespace TPCDice
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
+            if (_firstRollSinceReset)
+            {
+                _players.Next();
+                _firstRollSinceReset = false;
+            }
+
             RollNum = _dice.HoldCount + 1;
+            Refresh();
             _dice.Roll();
         }
 
@@ -83,7 +100,7 @@ namespace TPCDice
             _dice.Reset();
             _mostRecentlyHeld = null;
             RollNum = 1;
-            btnRoll.Text = "Roll";
+            _firstRollSinceReset = true;
         }
 
         /// <summary>
@@ -122,6 +139,11 @@ namespace TPCDice
         private void BtnDieBack_Click(object sender, EventArgs e)
         {
             foreach (var d in _dice.Where(d => d.Held && d.OnPlatter)) d.Reset();
+        }
+
+        private void PicPlayerLock_Click(object sender, EventArgs e)
+        {
+            _players.Locked = !_players.Locked;
         }
     }
 
@@ -228,6 +250,49 @@ namespace TPCDice
         {
             int upperBound = this.Count(d => d.Held) < 3 ? die.Value : 7;
             foreach (var d in this.Where(d => !d.Held && d.Value < upperBound)) d.OnPlatter = true;
+        }
+    }
+
+    public class Players
+    {
+        private DataGridView _grd;
+        private PictureBox _lockIcon;
+        public DataGridViewRow _selectedRow => _grd.SelectedRows.Count > 0 ? _grd.SelectedRows[0] : null;
+
+        public string Current => (string)_selectedRow?.Cells["ColPlayer"].Value;
+
+        private bool _locked;
+        public bool Locked
+        {
+            get => _locked;
+            set
+            {
+                _locked = value;
+                _lockIcon.Image = _locked ? Resources.Lock : Resources.Unlock;
+                _grd.Enabled = _grd.AllowUserToAddRows = !_locked;
+
+                if (_locked && _grd.SelectedCells.Count > 0) _grd.SelectedCells[0].OwningRow.Selected = true;
+            }
+        }
+
+        public Players (ThatsPrettyClever form)
+        {
+            _grd = form.GrdPlayers;
+            _lockIcon = form.PicPlayerLock;
+        }
+
+        public void Next()
+        {
+            if (_selectedRow == null) return;
+
+            int selectedIndex = _grd.Rows.IndexOf(_selectedRow);
+            _selectedRow.Selected = false;
+            selectedIndex++;
+            int playerCount = _locked ? _grd.Rows.Count : _grd.Rows.Count - 1; // If editable, last row is always the "Phantom" row
+            if (selectedIndex >= playerCount) selectedIndex = 0; 
+            _grd.Rows[selectedIndex].Selected = true;
+
+            _grd.Refresh();
         }
     }
 }
