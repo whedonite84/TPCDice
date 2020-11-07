@@ -48,9 +48,12 @@
             this.PicPlayerLock = new System.Windows.Forms.PictureBox();
             this.PicPlatter = new System.Windows.Forms.PictureBox();
             this.RbCleverCubed = new System.Windows.Forms.RadioButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.scoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.GrdPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlayerLock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlatter)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtYellow
@@ -58,7 +61,7 @@
             this.txtYellow.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtYellow.BackColor = System.Drawing.Color.Yellow;
             this.txtYellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYellow.Location = new System.Drawing.Point(183, 22);
+            this.txtYellow.Location = new System.Drawing.Point(178, 53);
             this.txtYellow.Name = "txtYellow";
             this.txtYellow.ReadOnly = true;
             this.txtYellow.Size = new System.Drawing.Size(83, 83);
@@ -72,7 +75,7 @@
             this.txtBlue.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBlue.BackColor = System.Drawing.Color.Blue;
             this.txtBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBlue.Location = new System.Drawing.Point(272, 22);
+            this.txtBlue.Location = new System.Drawing.Point(267, 53);
             this.txtBlue.Name = "txtBlue";
             this.txtBlue.ReadOnly = true;
             this.txtBlue.Size = new System.Drawing.Size(83, 83);
@@ -86,7 +89,7 @@
             this.txtGreen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGreen.Location = new System.Drawing.Point(361, 22);
+            this.txtGreen.Location = new System.Drawing.Point(356, 53);
             this.txtGreen.Name = "txtGreen";
             this.txtGreen.ReadOnly = true;
             this.txtGreen.Size = new System.Drawing.Size(83, 83);
@@ -100,7 +103,7 @@
             this.txtOrange.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtOrange.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrange.Location = new System.Drawing.Point(183, 111);
+            this.txtOrange.Location = new System.Drawing.Point(178, 142);
             this.txtOrange.Name = "txtOrange";
             this.txtOrange.ReadOnly = true;
             this.txtOrange.Size = new System.Drawing.Size(83, 83);
@@ -114,7 +117,7 @@
             this.txtPurple.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPurple.BackColor = System.Drawing.Color.Purple;
             this.txtPurple.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPurple.Location = new System.Drawing.Point(272, 111);
+            this.txtPurple.Location = new System.Drawing.Point(267, 142);
             this.txtPurple.Name = "txtPurple";
             this.txtPurple.ReadOnly = true;
             this.txtPurple.Size = new System.Drawing.Size(83, 83);
@@ -129,7 +132,7 @@
             this.txtWhite.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtWhite.BackColor = System.Drawing.Color.White;
             this.txtWhite.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWhite.Location = new System.Drawing.Point(361, 111);
+            this.txtWhite.Location = new System.Drawing.Point(356, 142);
             this.txtWhite.Name = "txtWhite";
             this.txtWhite.ReadOnly = true;
             this.txtWhite.Size = new System.Drawing.Size(83, 83);
@@ -141,7 +144,7 @@
             // btnRoll
             // 
             this.btnRoll.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRoll.Location = new System.Drawing.Point(537, 204);
+            this.btnRoll.Location = new System.Drawing.Point(537, 216);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(75, 23);
             this.btnRoll.TabIndex = 8;
@@ -152,7 +155,7 @@
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnReset.Location = new System.Drawing.Point(456, 204);
+            this.btnReset.Location = new System.Drawing.Point(456, 216);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 7;
@@ -164,7 +167,7 @@
             // 
             this.lblRollNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblRollNum.AutoSize = true;
-            this.lblRollNum.Location = new System.Drawing.Point(180, 6);
+            this.lblRollNum.Location = new System.Drawing.Point(175, 37);
             this.lblRollNum.Name = "lblRollNum";
             this.lblRollNum.Size = new System.Drawing.Size(63, 13);
             this.lblRollNum.TabIndex = 9;
@@ -186,7 +189,7 @@
             this.RbTPC.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbTPC.AutoSize = true;
             this.RbTPC.Checked = true;
-            this.RbTPC.Location = new System.Drawing.Point(448, 22);
+            this.RbTPC.Location = new System.Drawing.Point(443, 53);
             this.RbTPC.Name = "RbTPC";
             this.RbTPC.Size = new System.Drawing.Size(120, 17);
             this.RbTPC.TabIndex = 11;
@@ -199,7 +202,7 @@
             // 
             this.RbTwice.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbTwice.AutoSize = true;
-            this.RbTwice.Location = new System.Drawing.Point(448, 46);
+            this.RbTwice.Location = new System.Drawing.Point(443, 77);
             this.RbTwice.Name = "RbTwice";
             this.RbTwice.Size = new System.Drawing.Size(105, 17);
             this.RbTwice.TabIndex = 12;
@@ -210,7 +213,7 @@
             // BtnDieBack
             // 
             this.BtnDieBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDieBack.Location = new System.Drawing.Point(528, 444);
+            this.BtnDieBack.Location = new System.Drawing.Point(528, 468);
             this.BtnDieBack.Name = "BtnDieBack";
             this.BtnDieBack.Size = new System.Drawing.Size(75, 23);
             this.BtnDieBack.TabIndex = 13;
@@ -221,7 +224,7 @@
             // BtnScore
             // 
             this.BtnScore.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.BtnScore.Location = new System.Drawing.Point(537, 175);
+            this.BtnScore.Location = new System.Drawing.Point(537, 187);
             this.BtnScore.Name = "BtnScore";
             this.BtnScore.Size = new System.Drawing.Size(75, 23);
             this.BtnScore.TabIndex = 14;
@@ -236,9 +239,9 @@
             this.GrdPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrdPlayers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColPlayer});
-            this.GrdPlayers.Location = new System.Drawing.Point(12, 6);
+            this.GrdPlayers.Location = new System.Drawing.Point(12, 33);
             this.GrdPlayers.Name = "GrdPlayers";
-            this.GrdPlayers.Size = new System.Drawing.Size(145, 209);
+            this.GrdPlayers.Size = new System.Drawing.Size(145, 206);
             this.GrdPlayers.TabIndex = 15;
             // 
             // ColPlayer
@@ -250,7 +253,7 @@
             // PicPlayerLock
             // 
             this.PicPlayerLock.Image = ((System.Drawing.Image)(resources.GetObject("PicPlayerLock.Image")));
-            this.PicPlayerLock.Location = new System.Drawing.Point(14, 8);
+            this.PicPlayerLock.Location = new System.Drawing.Point(14, 35);
             this.PicPlayerLock.Name = "PicPlayerLock";
             this.PicPlayerLock.Size = new System.Drawing.Size(19, 19);
             this.PicPlayerLock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,7 +269,7 @@
             this.PicPlatter.Image = global::TPCDice.Properties.Resources.Platter;
             this.PicPlatter.Location = new System.Drawing.Point(12, 229);
             this.PicPlatter.Name = "PicPlatter";
-            this.PicPlatter.Size = new System.Drawing.Size(603, 255);
+            this.PicPlatter.Size = new System.Drawing.Size(603, 279);
             this.PicPlatter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicPlatter.TabIndex = 0;
             this.PicPlatter.TabStop = false;
@@ -275,7 +278,7 @@
             // 
             this.RbCleverCubed.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbCleverCubed.AutoSize = true;
-            this.RbCleverCubed.Location = new System.Drawing.Point(448, 69);
+            this.RbCleverCubed.Location = new System.Drawing.Point(443, 100);
             this.RbCleverCubed.Name = "RbCleverCubed";
             this.RbCleverCubed.Size = new System.Drawing.Size(92, 17);
             this.RbCleverCubed.TabIndex = 17;
@@ -283,13 +286,29 @@
             this.RbCleverCubed.UseVisualStyleBackColor = true;
             this.RbCleverCubed.CheckedChanged += new System.EventHandler(this.RbCleverCubed_CheckedChanged);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scoreToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(624, 24);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // scoreToolStripMenuItem
+            // 
+            this.scoreToolStripMenuItem.Name = "scoreToolStripMenuItem";
+            this.scoreToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.scoreToolStripMenuItem.Text = "Game Sheets";
+            // 
             // ThatsPrettyClever
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(624, 477);
+            this.ClientSize = new System.Drawing.Size(624, 501);
             this.Controls.Add(this.RbCleverCubed);
             this.Controls.Add(this.PicPlayerLock);
             this.Controls.Add(this.GrdPlayers);
@@ -308,13 +327,17 @@
             this.Controls.Add(this.txtBlue);
             this.Controls.Add(this.txtYellow);
             this.Controls.Add(this.PicPlatter);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "ThatsPrettyClever";
             this.Text = "Ganz Schön Clever!";
             ((System.ComponentModel.ISupportInitialize)(this.GrdPlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlayerLock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlatter)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +364,8 @@
         public System.Windows.Forms.PictureBox PicPlayerLock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPlayer;
         private System.Windows.Forms.RadioButton RbCleverCubed;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem scoreToolStripMenuItem;
     }
 }
 
