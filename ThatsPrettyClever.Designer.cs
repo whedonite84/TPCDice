@@ -49,7 +49,15 @@
             this.PicPlatter = new System.Windows.Forms.PictureBox();
             this.RbCleverCubed = new System.Windows.Forms.RadioButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.scoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuGameSheets = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnThatsPrettyCleverScoresheet = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnThatsPrettyCleverChallengeScoresheet = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnTwiceAsCleveScoresheet = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnCleverCubedScoresheet = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuRules = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnThatsPrettyCleverRules = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnTwiceAsCleverRules = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnCleverCubedRules = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.GrdPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlayerLock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicPlatter)).BeginInit();
@@ -289,18 +297,83 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.scoreToolStripMenuItem});
+            this.MenuGameSheets,
+            this.MenuRules});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(624, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // scoreToolStripMenuItem
+            // MenuGameSheets
             // 
-            this.scoreToolStripMenuItem.Name = "scoreToolStripMenuItem";
-            this.scoreToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.scoreToolStripMenuItem.Text = "Game Sheets";
+            this.MenuGameSheets.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnThatsPrettyCleverScoresheet,
+            this.BtnThatsPrettyCleverChallengeScoresheet,
+            this.BtnTwiceAsCleveScoresheet,
+            this.BtnCleverCubedScoresheet});
+            this.MenuGameSheets.Name = "MenuGameSheets";
+            this.MenuGameSheets.Size = new System.Drawing.Size(87, 20);
+            this.MenuGameSheets.Text = "Game Sheets";
+            // 
+            // BtnThatsPrettyCleverScoresheet
+            // 
+            this.BtnThatsPrettyCleverScoresheet.Name = "BtnThatsPrettyCleverScoresheet";
+            this.BtnThatsPrettyCleverScoresheet.Size = new System.Drawing.Size(239, 22);
+            this.BtnThatsPrettyCleverScoresheet.Text = "That\'s Pretty Clever";
+            this.BtnThatsPrettyCleverScoresheet.Click += new System.EventHandler(this.BtnThatsPrettyCleverScoresheet_Click);
+            // 
+            // BtnThatsPrettyCleverChallengeScoresheet
+            // 
+            this.BtnThatsPrettyCleverChallengeScoresheet.Name = "BtnThatsPrettyCleverChallengeScoresheet";
+            this.BtnThatsPrettyCleverChallengeScoresheet.Size = new System.Drawing.Size(239, 22);
+            this.BtnThatsPrettyCleverChallengeScoresheet.Text = "That\'s Pretty Clever (Challenge)";
+            this.BtnThatsPrettyCleverChallengeScoresheet.Click += new System.EventHandler(this.BtnThatsPrettyCleverChallengeScoresheet_Click);
+            // 
+            // BtnTwiceAsCleveScoresheet
+            // 
+            this.BtnTwiceAsCleveScoresheet.Name = "BtnTwiceAsCleveScoresheet";
+            this.BtnTwiceAsCleveScoresheet.Size = new System.Drawing.Size(239, 22);
+            this.BtnTwiceAsCleveScoresheet.Text = "Twice as Clever";
+            this.BtnTwiceAsCleveScoresheet.Click += new System.EventHandler(this.BtnTwiceAsCleveScoresheet_Click);
+            // 
+            // BtnCleverCubedScoresheet
+            // 
+            this.BtnCleverCubedScoresheet.Name = "BtnCleverCubedScoresheet";
+            this.BtnCleverCubedScoresheet.Size = new System.Drawing.Size(239, 22);
+            this.BtnCleverCubedScoresheet.Text = "Clever Cubed";
+            this.BtnCleverCubedScoresheet.Click += new System.EventHandler(this.BtnCleverCubedScoresheet_Click);
+            // 
+            // MenuRules
+            // 
+            this.MenuRules.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnThatsPrettyCleverRules,
+            this.BtnTwiceAsCleverRules,
+            this.BtnCleverCubedRules});
+            this.MenuRules.Name = "MenuRules";
+            this.MenuRules.Size = new System.Drawing.Size(47, 20);
+            this.MenuRules.Text = "Rules";
+            // 
+            // BtnThatsPrettyCleverRules
+            // 
+            this.BtnThatsPrettyCleverRules.Name = "BtnThatsPrettyCleverRules";
+            this.BtnThatsPrettyCleverRules.Size = new System.Drawing.Size(180, 22);
+            this.BtnThatsPrettyCleverRules.Text = "That\'s Pretty Clever";
+            this.BtnThatsPrettyCleverRules.Click += new System.EventHandler(this.BtnThatsPrettyCleverRules_Click);
+            // 
+            // BtnTwiceAsCleverRules
+            // 
+            this.BtnTwiceAsCleverRules.Name = "BtnTwiceAsCleverRules";
+            this.BtnTwiceAsCleverRules.Size = new System.Drawing.Size(180, 22);
+            this.BtnTwiceAsCleverRules.Text = "Twice as Clever";
+            this.BtnTwiceAsCleverRules.Click += new System.EventHandler(this.BtnTwiceAsCleverRules_Click);
+            // 
+            // BtnCleverCubedRules
+            // 
+            this.BtnCleverCubedRules.Name = "BtnCleverCubedRules";
+            this.BtnCleverCubedRules.Size = new System.Drawing.Size(180, 22);
+            this.BtnCleverCubedRules.Text = "Clever Cubed";
+            this.BtnCleverCubedRules.Click += new System.EventHandler(this.BtnCleverCubedRules_Click);
             // 
             // ThatsPrettyClever
             // 
@@ -365,7 +438,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPlayer;
         private System.Windows.Forms.RadioButton RbCleverCubed;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem scoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuGameSheets;
+        private System.Windows.Forms.ToolStripMenuItem BtnThatsPrettyCleverScoresheet;
+        private System.Windows.Forms.ToolStripMenuItem BtnThatsPrettyCleverChallengeScoresheet;
+        private System.Windows.Forms.ToolStripMenuItem BtnTwiceAsCleveScoresheet;
+        private System.Windows.Forms.ToolStripMenuItem BtnCleverCubedScoresheet;
+        private System.Windows.Forms.ToolStripMenuItem MenuRules;
+        private System.Windows.Forms.ToolStripMenuItem BtnThatsPrettyCleverRules;
+        private System.Windows.Forms.ToolStripMenuItem BtnTwiceAsCleverRules;
+        private System.Windows.Forms.ToolStripMenuItem BtnCleverCubedRules;
     }
 }
 

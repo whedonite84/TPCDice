@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Media;
@@ -169,6 +170,41 @@ namespace TPCDice
         private void PicPlayerLock_Click(object sender, EventArgs e)
         {
             _players.Locked = !_players.Locked;
+        }
+
+        private void BtnThatsPrettyCleverScoresheet_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"PDFs\ThatsPrettyClever Scoresheet.pdf");
+        }
+
+        private void BtnThatsPrettyCleverChallengeScoresheet_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"PDFs\ThatsPrettyClever Challenge.pdf");
+        }
+
+        private void BtnTwiceAsCleveScoresheet_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"PDFs\TwiceAsClever Scoresheet.pdf");
+        }
+
+        private void BtnCleverCubedScoresheet_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"PDFs\CleverCubed Scoresheet.pdf");
+        }
+
+        private void BtnThatsPrettyCleverRules_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"PDFs\ThatsPrettyClever Rules.pdf");
+        }
+
+        private void BtnTwiceAsCleverRules_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"PDFs\TwiceAsClever Rules.pdf");
+        }
+
+        private void BtnCleverCubedRules_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"PDFs\CleverCubed Rules (unofficial).pdf");
         }
     }
 
